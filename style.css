@@ -385,7 +385,7 @@ h2 span {
 /* ===== КАРТОЧКИ «ЗА ЧТО Я ТЕБЯ ЛЮБЛЮ» ===== */
 
 .love-section .love-card {
-  flex-basis: calc(33.333% - 11px);
+  flex-basis: 85%;
   min-width: 0;
   padding: 9px 9px 15px;
   overflow: hidden;
