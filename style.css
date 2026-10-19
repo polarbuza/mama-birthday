@@ -1450,3 +1450,13 @@ body {
 *::after {
   box-sizing: border-box;
 }
+/* ===== ПРИНУДИТЕЛЬНО ДЕЛАЕМ 2-Ю КАРУСЕЛЬ БОЛЬШОЙ ===== */
+.love-section .love-card {
+  flex: 0 0 85% !important;
+  max-width: 85% !important;
+}
+
+.love-section .love-card img {
+  height: auto !important;
+  min-height: 250px;
+}
