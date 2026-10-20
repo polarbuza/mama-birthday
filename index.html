@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff5f6">
     <title>С днём рождения, мамочка! ❤️</title>
+    
+    <!-- ДОБАВЛЕНЫ КРАСИВЫЕ ШРИФТЫ -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,19 +29,18 @@
                     src="https://sun9-16.vkuserphoto.ru/s/v1/ig2/uzUE_fdHy4SRGiJkJ7dK6m5cr_wPgqhJBbcquyOsTwabiKUovcbkwxfNLMbMcZKmKoDIAkSFZV07MzRhBbUTepuv.jpg?quality=95&as=32x34,48x51,72x77,108x115,160x170,240x255,360x383,480x510,540x574,640x680,720x765,1080x1148,1280x1361,1440x1531,2408x2560&from=bu&u=5qtt4osFfw3VQB89-MN36PAls_GnfUhWsrbd5Wd0kLg&cs=640x0"
                     alt="Тёплые семейные моменты"
                 >
-                <span class="frame-heart">♡</span>
+                <span class="frame-heart">❀</span>
             </div>
             <div class="hero-bottom-decoration">❀　♡　❀</div>
         </div>
     </header>
+    
     <!-- КАРУСЕЛЬ «МОМЕНТЫ» -->
     <section class="memories" id="memories">
         <div class="section-heading">
             <p class="eyebrow">Наш альбом</p>
-            <h2>Моменты, которые хочется сохранить <span>♥</span></h2>
-            <p class="section-description">
-                Наши самые тёплые воспоминания
-            </p>
+            <h2 class="section-title-main">Моменты, которые хочется сохранить <span>♥</span></h2>
+            <p class="section-description">Наши самые тёплые воспоминания</p>
         </div>
         <div class="carousel" id="memories-carousel">
             <button
@@ -89,60 +92,44 @@
             >›</button>
             <div class="dots" aria-label="Выбор фотографии"></div>
         </div>
-        <p class="section-note">
-            Каждая фотография — маленькая история о нашей любви. ♡
-        </p>
+        <p class="section-note text-center">Каждая фотография — <span class="accent-word">маленькая история о нашей любви</span>. <span class="pink-heart">♥</span></p>
     </section>
+    
     <!-- ПИСЬМО МАМЕ -->
     <section class="letter-section" id="letter">
-        <div class="letter-decoration">❀</div>
-        <div class="letter-card">
-            <p class="eyebrow">Несколько слов от сердца</p>
-            <h2>Мамочке, с любовью ♡</h2>
-            <div class="letter-text">
-                <p>Мамочка, с днём рождения! ❤️</p>
-                <p>С твоим 45-летием, моя родная!</p>
-                <p>
-                    Желаю тебе крепкого здоровья, счастья, спокойствия
-                    и побольше поводов улыбаться. Пусть исполняются
-                    твои желания, а каждый день приносит радость
-                    и приятные сюрпризы.
-                </p>
-                <p>
-                    Спасибо тебе за твою заботу, поддержку, терпение
-                    и бесконечную любовь. Я очень ценю всё, что ты
-                    для меня делаешь, даже если не всегда говорю об этом.
-                </p>
-                <p>
-                    Ты у меня уже взрослый человек, но только по паспорту!
-                    😄 Оставайся всегда такой же яркой, весёлой,
-                    жизнерадостной и немного озорной. Ведь в душе ты
-                    всегда ребёнок, и я очень хочу, чтобы ты никогда
-                    не теряла эту свою чудесную искорку!
-                </p>
-                <p>
-                    В этот день желаю тебе побольше отдыхать, баловать
-                    себя, радоваться мелочам и всегда находить время
-                    для себя. Ты заслуживаешь всего самого прекрасного!
-                </p>
-                <p>
-                    Я очень сильно тебя люблю и счастлива, что именно ты —
-                    моя мама! С праздником, моя любимая! ❤️
-                </p>
-                <p class="letter-signature">
-                    С любовью, твоя доченька. 💕
-                </p>
-            </div>
+      <div class="letter-container">
+        
+        <div class="letter-icon">❀</div>
+        <span class="letter-subtitle">НЕСКОЛЬКО СЛОВ ОТ СЕРДЦА</span>
+        <h2 class="letter-title">Мамочке, с любовью <span class="pink-heart">♥</span></h2>
+        
+        <div class="letter-content">
+          <p class="text-center letter-greeting">Мамочка, с днём рождения! ❤️</p>
+          <p class="text-center letter-highlight">С твоим <span class="accent-number">45-летием</span>, моя родная!</p>
+          
+          <p class="text-justify">Желаю тебе <span class="accent-word">крепкого здоровья</span>, счастья, спокойствия и побольше поводов улыбаться. Пусть исполняются твои желания, а каждый день приносит <span class="accent-word">радость</span> и приятные сюрпризы.</p>
+          
+          <p class="text-justify">Спасибо тебе за твою заботу, поддержку, терпение и <span class="accent-word">бесконечную любовь</span>. Я очень ценю всё, что ты для меня делаешь, даже если не всегда говорю об этом.</p>
+          
+          <p class="text-justify">Ты у меня уже взрослый человек, но только <span class="accent-word">по паспорту</span>! 😄 Оставайся всегда такой же яркой, весёлой, жизнерадостной и немного озорной. Ведь в душе ты всегда ребёнок, и я очень хочу, чтобы ты никогда не теряла эту свою <span class="accent-word">чудесную искорку</span>!</p>
+          
+          <p class="text-justify">В этот день желаю тебе побольше отдыхать, баловать себя, радоваться мелочам и всегда находить время для себя. Ты заслуживаешь <span class="accent-word">всего самого прекрасного</span>!</p>
+          
+          <p class="text-center letter-ending">Я очень сильно тебя люблю и счастлива, что именно ты — <span class="accent-heart">моя мама</span>! С праздником, моя любимая! ❤️</p>
         </div>
+
+        <div class="letter-signature">
+          С любовью, твоя доченька. 💕
+        </div>
+      </div>
     </section>
+    
     <!-- КАРУСЕЛЬ «ЗА ЧТО Я ТЕБЯ ЛЮБЛЮ» -->
 <section class="love-section" id="love">
     <div class="section-heading">
         <p class="eyebrow">Самое главное</p>
-        <h2>За что я тебя люблю <span>♥</span></h2>
-        <p class="section-description">
-            Мои любимые моменты с тобой
-        </p>
+        <h2 class="section-title-main">За что я тебя люблю <span>♥</span></h2>
+        <p class="section-description">Мои любимые моменты с тобой</p>
     </div>
     <div class="carousel" id="love-carousel">
         <button
@@ -236,10 +223,8 @@
 <section class="gifts-section" id="gifts">
     <div class="section-heading">
         <p class="eyebrow">Это для тебя</p>
-        <h2>Маленький сюрприз <span>♡</span></h2>
-        <p class="section-description">
-            Потому что ты заслуживаешь радости
-        </p>
+        <h2 class="section-title-main">Маленький сюрприз <span>♥</span></h2>
+        <p class="section-description">Потому что ты заслуживаешь радости</p>
     </div>
     <div class="gift-grid single-gift">
         <div class="gift-card">
@@ -260,9 +245,7 @@
             </div>
         </div>
     </div>
-    <p class="gifts-note">
-        Самый главный подарок — это время, проведённое вместе. ❤️
-    </p>
+    <p class="gifts-note text-center">Самый главный подарок — это <span class="accent-word">время, проведённое вместе</span>. ❤️</p>
 </section>
     <!-- ФИНАЛЬНОЕ ПОЗДРАВЛЕНИЕ -->
     <section class="final-section" id="final">
