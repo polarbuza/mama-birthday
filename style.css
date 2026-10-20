@@ -323,7 +323,7 @@ h2 span {
 /* ===== ПИСЬМО ===== */
 
 .letter-section {
-  background: transparent; /* Убран свой фон */
+  background: transparent;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
@@ -333,12 +333,14 @@ h2 span {
 .letter-container {
   max-width: 640px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.85); 
-  backdrop-filter: blur(5px);
-  padding: 45px 35px;
-  border-radius: 8px;
-  box-shadow: 0 15px 35px rgba(117, 67, 84, 0.08), 0 5px 15px rgba(117, 67, 84, 0.04);
-  border: 1px solid rgba(255, 255, 255, 1);
+  
+  background: transparent; 
+  box-shadow: none;
+  border: none;
+  backdrop-filter: none;
+  
+  padding: 20px 20px; 
+  border-radius: 0;
 }
 
 .letter-icon {
@@ -650,12 +652,12 @@ h2 span {
 
 .final-section {
   display: flex;
-  flex-direction: column; /* Выстраиваем вертикально */
+  flex-direction: column;
   align-items: center; 
   justify-content: center;
   gap: 16px; 
   padding: 65px max(6vw, 20px);
-  background: transparent; /* Убран свой фон */
+  background: transparent;
   margin: 0;
   text-align: center;
 }
@@ -685,12 +687,12 @@ h2 span {
 
 .footer {
   display: flex;
-  flex-direction: column; /* Выстраиваем вертикально */
+  flex-direction: column;
   align-items: center; 
   justify-content: center;
   gap: 8px; 
   padding: 30px 20px; 
-  background: transparent; /* Убран свой фон */
+  background: transparent;
   font-size: 12px; 
   text-align: center;
   margin: 0;
