@@ -24,13 +24,24 @@ body {
   margin: 0;
   color: var(--text);
   
-  /* ОБЩИЙ ПЛАВНЫЙ ГРАДИЕНТ ДЛЯ ВСЕГО САЙТА */
-  background: linear-gradient(180deg, #fff9f3 0%, #f8e8e8 30%, #fff5ed 60%, #f5e0e2 100%);
+  background: linear-gradient(
+    180deg, 
+    #fff9f3 0%, 
+    #fdf3f3 20%, 
+    #f8e8e8 50%, 
+    #fff5ed 80%, 
+    #f5e0e2 100%
+  );
+
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.7;
+
+  touch-action: manipulation;
 }
 
 img {
@@ -57,7 +68,7 @@ a {
   gap: clamp(24px, 6vw, 70px);
   position: relative;
   overflow: hidden;
-  background: transparent; /* Убран свой фон, теперь прозрачный */
+  background: transparent;
   margin: 0;
 }
 
@@ -179,17 +190,17 @@ h2 span {
 }
 
 .memories {
-  background: transparent; /* Убран свой фон */
+  background: transparent; 
   margin: 0;
 }
 
 .love-section {
-  background: transparent; /* Убран свой фон */
+  background: transparent;
   margin: 0;
 }
 
 .gifts-section {
-  background: transparent; /* Убран свой фон */
+  background: transparent; 
   margin: 0;
 }
 
@@ -217,6 +228,8 @@ h2 span {
   scroll-behavior: smooth;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
+  touch-action: pan-x;
+}
 }
 
 .carousel-track::-webkit-scrollbar {
