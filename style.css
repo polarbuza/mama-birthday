@@ -65,15 +65,6 @@ a {
   z-index: 1;
 }
 
-.eyebrow,
-.section-label {
-  color: var(--pink);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 10px;
-  font-weight: 600;
-}
-
 h1,
 h2,
 .photo-card p,
@@ -153,7 +144,9 @@ h2 span {
   right: 7px;
   bottom: 0;
   color: var(--pink);
-  font-size: 32px;
+  font-size: 26px;
+  line-height: 1;
+  padding-bottom: 5xp;
 }
 
 .flower {
@@ -191,13 +184,6 @@ h2 span {
 
 .gifts-section {
   background: var(--cream);
-}
-
-.section h2,
-.final-text h2 {
-  font-size: clamp(30px, 4.5vw, 43px);
-  line-height: 1.12;
-  margin: 8px auto 12px;
 }
 
 .section-subtitle {
@@ -240,8 +226,6 @@ h2 span {
   box-shadow: var(--shadow);
   scroll-snap-align: center;
   transform: rotate(-1deg);
-
-  /* Исправление выхода текста за карточку */
   overflow: hidden;
 }
 
@@ -262,13 +246,10 @@ h2 span {
   max-width: 100%;
   margin: 12px 0 0;
   padding: 0 3px;
-
   font-size: 17px;
   font-style: italic;
   line-height: 1.25;
   text-align: center;
-
-  /* Переносим длинные слова и фразы */
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
@@ -324,662 +305,146 @@ h2 span {
 /* ===== ПИСЬМО ===== */
 
 .letter-section {
-  background: #fffaf5;
+  background:
+    radial-gradient(
+      ellipse at 10% 15%,
+      #f3d8dc 0,
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      #f8e7e7,
+      #fff5ed 55%,
+      #f5e0e2
+    );
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.letter-layout {
-  max-width: 1000px;
-  margin: 28px auto 0;
-  display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  align-items: center;
-  gap: 30px;
-  text-align: left;
+.letter-container {
+  max-width: 640px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(5px);
+  padding: 45px 35px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(117, 67, 84, 0.08), 0 5px 15px rgba(117, 67, 84, 0.04);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.letter-decoration {
+.letter-icon {
+  font-size: 20px;
+  color: #b87b7b;
+  margin-bottom: 15px;
   text-align: center;
-  color: var(--pink-dark);
-  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.letter-subtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.5px; 
+  letter-spacing: 5px; 
+  text-transform: uppercase;
+  color: #a07070;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.letter-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px; 
+  color: #4a3b3b;
+  margin-bottom: 35px;
+  font-weight: 400;
+  text-align: center;
   font-style: italic;
-  font-size: 20px;
+  border-bottom: 1px dashed rgba(198, 110, 133, 0.25);
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  max-width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.envelope {
-  font-size: clamp(90px, 16vw, 170px);
-  line-height: 1.2;
-  filter: drop-shadow(0 8px 12px #b75c6b20);
+.letter-content {
+  font-family: 'Lora', Georgia, serif;
+  color: #4d3d3d; 
 }
 
-.letter {
-  position: relative;
-  background: #fffdf8;
-  padding: clamp(22px, 4vw, 42px);
-  border: 1px solid #f0dfd2;
-  box-shadow: var(--shadow);
-  border-radius: 4px;
-  font-size: 13px;
-  line-height: 1.8;
+.letter-content p {
+  font-size: 15.5px; 
+  line-height: 2; 
+  margin-bottom: 22px;
+  letter-spacing: 0.2px;
 }
 
-.letter p {
-  margin: 0 0 13px;
+/* Классы для выравнивания */
+.text-center {
+  text-align: center !important;
 }
 
-.letter-heart {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  color: #cf7e8d;
-  font-size: 20px;
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.letter-signature {
-  padding-top: 12px;
-  border-top: 1px solid #ecd9d5;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+/* Акценты */
+.accent-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b87b7b;
+  border-bottom: 1px solid rgba(184, 123, 123, 0.4);
+  padding-bottom: 1px;
+}
+
+.accent-word {
+  color: #8c5a5a; 
+  font-weight: 600;
   font-style: italic;
+}
+
+.accent-heart {
+  font-weight: 600;
+  color: #b87b7b;
+  text-decoration: underline;
+  text-decoration-color: rgba(184, 123, 123, 0.3);
+  text-underline-offset: 4px;
+}
+
+/* Выделение блоков */
+.letter-greeting {
   font-size: 19px;
+  font-weight: 600;
+  color: #7a4848;
+  margin-bottom: 8px !important;
 }
 
-/* ===== КАРТОЧКИ «ЗА ЧТО Я ТЕБЯ ЛЮБЛЮ» ===== */
-
-.love-section .love-card {
-  flex-basis: 85%;
-  min-width: 0;
-  padding: 9px 9px 15px;
-  overflow: hidden;
-}
-
-.love-section .love-card img {
-  aspect-ratio: 4 / 5;
-}
-
-.love-section .love-card p {
-  width: 100%;
-  max-width: 100%;
-  margin: 12px 0 0;
-  padding: 0 3px;
-
-  font-size: 17px;
-  line-height: 1.25;
-  min-height: 0;
-
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  hyphens: auto;
-}
-
-/* ===== ПОДАРОК ===== */
-
-.gift-grid {
-  max-width: 1000px;
-  margin: 30px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.gift-card {
-  background: #fffdf9;
-  border: 1px solid #f0dfd8;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.gift-card > img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-}
-
-.gift-info {
-  padding: 17px 12px 20px;
-}
-
-.gift-info h3 {
-  font-size: 14px;
-  margin: 0 0 4px;
-}
-
-.gift-info p {
-  font-size: 11px;
-  margin: 0 0 15px;
-  opacity: .8;
-}
-
-.gift-button {
-  padding: 10px 16px;
-  font-size: 11px;
-}
-
-.single-gift {
-  grid-template-columns: minmax(0, 340px);
-  justify-content: center;
-  margin-top: 18px;
-}
-
-.single-gift .gift-card {
-  display: block;
-  text-align: center;
-  padding: 18px 20px;
-  border-radius: 16px;
-}
-
-.single-gift .gift-info {
-  padding: 0;
-}
-
-.single-gift .gift-info h3 {
-  font-size: 20px;
-  margin: 0 0 6px;
-}
-
-.single-gift .gift-info p {
-  font-size: 13px;
-  line-height: 1.6;
-  margin: 0 auto 14px;
-  max-width: 270px;
-}
-
-.single-gift .gift-button {
-  padding: 12px 22px;
-  font-size: 12px;
-}
-
-/* ===== ВСПЛЫВАЮЩЕЕ ОКНО С БИЛЕТОМ ===== */
-
-.gift-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-}
-
-.gift-modal.open {
-  display: flex;
-}
-
-.gift-modal .modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: #39202bc9;
-}
-
-.gift-modal .modal-content {
-  width: 100%;
-  max-width: 1000px;
-  height: 94vh;
-  height: 94dvh;
-  max-height: 94vh;
-  max-height: 94dvh;
-  padding: 8px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  background: #fffaf6;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 18px 50px #24121d50;
-  text-align: center;
-}
-
-.gift-modal
-#modal-body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.gift-modal .ticket-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 5px;
-}
-
-.gift-modal .modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 10;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255, 250, 246, 0.95);
-  color: #87445b;
-  font-size: 28px;
-  line-height: 1;
-  box-shadow: 0 2px 10px #0002;
-  cursor: pointer;
-}
-
-/* ===== ФИНАЛ ===== */
-
-.final-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(25px, 6vw, 65px);
-  padding: 65px max(6vw, 20px);
-  background: linear-gradient(120deg, #f9e7e5, #fff8f2);
-}
-
-.final-photo {
-  width: min(35vw, 300px);
-  height: 330px;
-  flex-shrink: 0;
-  transform: rotate(-4deg);
-}
-
-.final-text {
-  max-width: 500px;
-  text-align: center;
-}
-
-.final-text h2 {
-  font-size: clamp(30px, 4vw, 43px);
-}
-
-.little-divider {
-  color: var(--pink);
-  margin: 20px 0;
-}
-
-/* ===== ПОДВАЛ ===== */
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 20px;
-  background: #f5dedf;
-  font-size: 11px;
-}
-
-.footer a {
-  text-decoration: none;
-  color: var(--pink-dark);
-}
-
-/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
-
-@media (max-width: 600px) {
-  body {
-    font-size: 13px;
-  }
-
-  /* Главный экран */
-
-  .hero {
-    min-height: auto;
-    padding: 40px 18px 46px;
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 43px;
-  }
-
-  .hero-photo {
-    width: min(76vw, 300px);
-    height: 310px;
-    margin: 0 auto;
-    transform: rotate(3deg);
-  }
-
-  /* Секции */
-
-  .section {
-    padding: 42px 12px;
-  }
-
-  .section h2 {
-    font-size: 32px;
-  }
-
-  /* Карусели */
-
-  .carousel {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .photo-card {
-    flex-basis: 85%;
-  }
-
-  .photo-card p {
-    font-size: 16px;
-    line-height: 1.3;
-    margin-top: 10px;
-    padding: 0 4px;
-  }
-
-  .arrow {
-    width: 28px;
-    height: 28px;
-    font-size: 22px;
-    line-height: 22px;
-  }
-
-  /* Карусель любви */
-
-  .love-section .love-card {
-    flex-basis: 85%;
-  }
-
-  .love-section .love-card p {
-    font-size: 16px;
-    line-height: 1.3;
-    margin-top: 10px;
-    padding: 0 4px;
-  }
-
-  /* Письмо */
-
-  .letter-layout {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .letter-decoration {
-    font-size: 17px;
-  }
-
-  .envelope {
-    font-size: 82px;
-  }
-
-  .letter {
-    padding: 24px 20px;
-    font-size: 12px;
-  }
-
-  /* Подарок */
-
-  .gift-grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    gap: 16px;
-  }
-
-  .gift-card {
-    display: grid;
-    grid-template-columns: 42% 1fr;
-    align-items: center;
-  }
-
-  .gift-card > img {
-    height: 100%;
-    min-height: 165px;
-    aspect-ratio: auto;
-  }
-
-  .gift-info {
-    padding: 14px 10px;
-  }
-
-  .gift-info h3 {
-    font-size: 13px;
-  }
-
-  .gift-info p {
-    line-height: 1.5;
-  }
-
-  .gift-button {
-    padding: 10px 12px;
-  }
-
-  .single-gift {
-    grid-template-columns: minmax(0, 340px);
-  }
-
-  .single-gift .gift-card {
-    display: block;
-    padding: 18px 16px;
-  }
-
-  .single-gift .gift-info {
-    padding: 0;
-  }
-
-  /* Окно с билетом */
-
-  .gift-modal {
-    padding: 5px;
-  }
-
-  .gift-modal .modal-content {
-    width: 100%;
-    height: 96vh;
-    height: 96dvh;
-    max-height: 96vh;
-    max-height: 96dvh;
-    padding: 5px;
-    border-radius: 8px;
-  }
-
-  .gift-modal .modal-close {
-    top: 6px;
-    right: 6px;
-    width: 34px;
-    height: 34px;
-    font-size: 25px;
-  }
-
-  /* Финальное поздравление */
-
-  .final-section {
-    flex-direction: column;
-    padding: 48px 20px;
-    gap: 28px;
-  }
-
-  .final-photo {
-    width: min(72vw, 280px);
-    height: 300px;
-  }
-
-  .final-text h2 {
-    font-size: 34px;
-  }
-
-  /* Подвал */
-
-  .footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* Отступы обычных секций */
-
-  section:not(.hero):not(.final-section) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  section:not(.hero):not(.final-section) h2,
-  section:not(.hero):not(.final-section) h3,
-  section:not(.hero):not(.final-section) p {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-}
-
-/* Убираем горизонтальное смещение на телефоне */
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-width: 100%;
-  aspect-ratio: 4 / 5;
-  display: block;
-  object-fit: cover;
-  border-radius: 3px;
-}
-
-.photo-card p {
-  width: 100%;
-  max-width: 100%;
-  margin: 12px 0 0;
-  padding: 0 3px;
-
+.letter-highlight {
   font-size: 17px;
   font-style: italic;
-  line-height: 1.25;
-  text-align: center;
-
-  /* Переносим длинные слова и фразы */
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  hyphens: auto;
+  color: #a86d6d;
+  margin-bottom: 30px !important;
 }
 
-.arrow {
-  position: absolute;
-  z-index: 2;
-  top: 40%;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #e8cbd0;
-  border-radius: 50%;
-  background: #fffaf7;
-  color: var(--pink-dark);
-  font-size: 26px;
-  line-height: 26px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
+.letter-ending {
+  font-size: 17px;
+  font-weight: 600;
+  color: #7a4848;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px dashed rgba(198, 110, 133, 0.25);
 }
 
-.arrow.prev {
-  left: 0;
-}
-
-.arrow.next {
-  right: 0;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border: 0;
-  border-radius: 50%;
-  padding: 0;
-  background: #dfc1c6;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: var(--pink);
-  transform: scale(1.3);
-}
-
-/* ===== ПИСЬМО ===== */
-
-.letter-section {
-  background: #fffaf5;
-}
-
-.letter-layout {
-  max-width: 1000px;
-  margin: 28px auto 0;
-  display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  align-items: center;
-  gap: 30px;
-  text-align: left;
-}
-
-.letter-decoration {
-  text-align: center;
-  color: var(--pink-dark);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-size: 20px;
-}
-
-.envelope {
-  font-size: clamp(90px, 16vw, 170px);
-  line-height: 1.2;
-  filter: drop-shadow(0 8px 12px #b75c6b20);
-}
-
-.letter {
-  position: relative;
-  background: #fffdf8;
-  padding: clamp(22px, 4vw, 42px);
-  border: 1px solid #f0dfd2;
-  box-shadow: var(--shadow);
-  border-radius: 4px;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.letter p {
-  margin: 0 0 13px;
-}
-
-.letter-heart {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  color: #cf7e8d;
-  font-size: 20px;
-}
-
+/* Подпись */
 .letter-signature {
-  padding-top: 12px;
-  border-top: 1px solid #ecd9d5;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  margin-top: 35px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
   font-style: italic;
-  font-size: 19px;
+  text-align: right;
+  color: #8c5a5a;
+  padding-right: 10px;
 }
 
 /* ===== КАРТОЧКИ «ЗА ЧТО Я ТЕБЯ ЛЮБЛЮ» ===== */
@@ -1000,11 +465,9 @@ width: 100%;
   max-width: 100%;
   margin: 12px 0 0;
   padding: 0 3px;
-
   font-size: 17px;
   line-height: 1.25;
   min-height: 0;
-
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
@@ -1133,8 +596,7 @@ width: 100%;
   text-align: center;
 }
 
-.gift-modal
-#modal-body {
+.gift-modal #modal-body {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1224,14 +686,61 @@ width: 100%;
   color: var(--pink-dark);
 }
 
+/* ===== СТИЛИ СЕКЦИЙ ===== */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #a07070;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-title-main {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  color: #4a3b3b;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.section-title-main span {
+  color: var(--pink);
+  font-style: normal;
+}
+
+.section-description {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  color: #8c5a5a;
+  margin: 0;
+}
+
+.section-note, 
+.gifts-note {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  color: #5c4a4a;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
 
-max-width: 600px {
+@media (max-width: 600px) {
   body {
     font-size: 13px;
   }
-
-  /* Главный экран */
 
   .hero {
     min-height: auto;
@@ -1255,17 +764,9 @@ max-width: 600px {
     transform: rotate(3deg);
   }
 
-  /* Секции */
-
   .section {
     padding: 42px 12px;
   }
-
-  .section h2 {
-    font-size: 32px;
-  }
-
-  /* Карусели */
 
   .carousel {
     padding-left: 25px;
@@ -1290,8 +791,6 @@ max-width: 600px {
     line-height: 22px;
   }
 
-  /* Карусель любви */
-
   .love-section .love-card {
     flex-basis: 85%;
   }
@@ -1303,27 +802,37 @@ max-width: 600px {
     padding: 0 4px;
   }
 
-  /* Письмо */
-
-  .letter-layout {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .letter-section {
+    padding: 50px 15px;
   }
-
-  .letter-decoration {
-    font-size: 17px;
+  
+  .letter-container {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.92);
   }
-
-  .envelope {
-    font-size: 82px;
+  
+  .letter-title {
+    font-size: 26px;
+    margin-bottom: 25px;
   }
-
-  .letter {
-    padding: 24px 20px;
-    font-size: 12px;
+  
+  .letter-content p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin-bottom: 18px;
   }
-
-  /* Подарок */
+  
+  .letter-greeting {
+    font-size: 18px;
+  }
+  
+  .letter-highlight {
+    font-size: 16px;
+  }
+  
+  .letter-signature {
+    font-size: 18px;
+  }
 
   .gift-grid {
     grid-template-columns: 1fr;
@@ -1372,8 +881,6 @@ max-width: 600px {
     padding: 0;
   }
 
-  /* Окно с билетом */
-
   .gift-modal {
     padding: 5px;
   }
@@ -1396,8 +903,6 @@ max-width: 600px {
     font-size: 25px;
   }
 
-  /* Финальное поздравление */
-
   .final-section {
     flex-direction: column;
     padding: 48px 20px;
@@ -1413,15 +918,11 @@ max-width: 600px {
     font-size: 34px;
   }
 
-  /* Подвал */
-
   .footer {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
-
-  /* Отступы обычных секций */
 
   section:not(.hero):not(.final-section) {
     padding-left: 20px;
@@ -1434,9 +935,21 @@ max-width: 600px {
     max-width: 100%;
     overflow-wrap: break-word;
   }
+  
+  .section-title-main {
+    font-size: 26px;
+  }
+  
+  .section-description {
+    font-size: 14px;
+  }
+  
+  .section-note, 
+  .gifts-note {
+    font-size: 14px;
+    padding: 0 10px;
+  }
 }
-
-/* Убираем горизонтальное смещение на телефоне */
 
 html,
 body {
@@ -1450,13 +963,8 @@ body {
 *::after {
   box-sizing: border-box;
 }
-/* ===== ПРИНУДИТЕЛЬНО ДЕЛАЕМ 2-Ю КАРУСЕЛЬ БОЛЬШОЙ ===== */
-.love-section .love-card {
-  flex: 0 0 85% !important;
-  max-width: 85% !important;
-}
 
-.love-section .love-card img {
-  height: auto !important;
-  min-height: 250px;
+.pink-heart {
+  color: var(--pink);
+  font-style: normal;
 }
