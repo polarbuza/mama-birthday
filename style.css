@@ -41,7 +41,6 @@ body {
   font-size: 14px;
   line-height: 1.7;
 
-  touch-action: manipulation;
 }
 
 img {
@@ -228,7 +227,6 @@ h2 span {
   scroll-behavior: smooth;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
-  touch-action: pan-x;
 }
 }
 
