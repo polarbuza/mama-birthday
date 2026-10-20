@@ -23,7 +23,11 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background: var(--cream);
+  
+  /* ОБЩИЙ ПЛАВНЫЙ ГРАДИЕНТ ДЛЯ ВСЕГО САЙТА */
+  background: linear-gradient(180deg, #fff9f3 0%, #f8e8e8 30%, #fff5ed 60%, #f5e0e2 100%);
+  background-attachment: fixed;
+  
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -53,9 +57,7 @@ a {
   gap: clamp(24px, 6vw, 70px);
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 10% 20%, #f3cfd2 0, transparent 35%),
-    linear-gradient(120deg, #fff9f3, #f8e1df 60%, #f2d1c8);
+  background: transparent; /* Убран свой фон, теперь прозрачный */
   margin: 0;
 }
 
@@ -177,17 +179,17 @@ h2 span {
 }
 
 .memories {
-  background: var(--pink-light);
+  background: transparent; /* Убран свой фон */
   margin: 0;
 }
 
 .love-section {
-  background: linear-gradient(150deg, #f8e7e7, #fff4ed);
+  background: transparent; /* Убран свой фон */
   margin: 0;
 }
 
 .gifts-section {
-  background: var(--cream);
+  background: transparent; /* Убран свой фон */
   margin: 0;
 }
 
@@ -310,18 +312,7 @@ h2 span {
 /* ===== ПИСЬМО ===== */
 
 .letter-section {
-  background:
-    radial-gradient(
-      ellipse at 10% 15%,
-      #f3d8dc 0,
-      transparent 40%
-    ),
-    linear-gradient(
-      145deg,
-      #f8e7e7,
-      #fff5ed 55%,
-      #f5e0e2
-    );
+  background: transparent; /* Убран свой фон */
   padding: 80px 20px;
   display: flex;
   justify-content: center;
@@ -648,12 +639,12 @@ h2 span {
 
 .final-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Выстраиваем вертикально */
+  align-items: center; 
   justify-content: center;
-  gap: 16px;
+  gap: 16px; 
   padding: 65px max(6vw, 20px);
-  background: linear-gradient(120deg, #f9e7e5, #fff8f2);
+  background: transparent; /* Убран свой фон */
   margin: 0;
   text-align: center;
 }
@@ -678,16 +669,24 @@ h2 span {
   color: var(--pink);
   margin: 20px 0;
 }
+
 /* ===== ПОДВАЛ ===== */
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 20px;
-  background: #f5dedf;
-  font-size: 11px;
+  flex-direction: column; /* Выстраиваем вертикально */
+  align-items: center; 
+  justify-content: center;
+  gap: 8px; 
+  padding: 30px 20px; 
+  background: transparent; /* Убран свой фон */
+  font-size: 12px; 
+  text-align: center;
   margin: 0;
+}
+
+.footer p {
+  margin: 0; 
 }
 
 .footer a {
@@ -695,7 +694,7 @@ h2 span {
   color: var(--pink-dark);
 }
 
-/* ===== СТИЛЬ СЕКЦИЙ ===== */
+/* ===== НОВЫЕ ЗАГОЛОВКИ СЕКЦИЙ ===== */
 
 .section-heading {
   text-align: center;
@@ -785,7 +784,7 @@ h2 span {
     padding-left: 25px;
     padding-right: 25px;
   }
-  
+
   .photo-card {
     flex: 0 0 85%; 
   }
