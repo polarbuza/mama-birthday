@@ -37,7 +37,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  touch-action: manipulation; /* Отключает случайный зум при двойном тапе */
+  touch-action: manipulation;
 }
 
 img {
@@ -214,7 +214,7 @@ h2 span {
   scroll-behavior: smooth;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
-  touch-action: pan-x; /* Запрещает зум внутри карусели */
+  touch-action: pan-x;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -317,7 +317,6 @@ h2 span {
   margin: 0;
 }
 
-/* Внешний контейнер теперь без белой плашки */
 .letter-container {
   max-width: 640px;
   width: 100%;
@@ -356,13 +355,12 @@ h2 span {
   border-bottom: 1px dashed rgba(198, 110, 133, 0.25);
   padding-bottom: 25px;
   margin-top: 0;
-  margin-bottom: 35px; /* Чуть увеличили отступ до карточки */
+  margin-bottom: 35px;
   max-width: 80%; 
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Включаем белую плашку ТОЛЬКО для текста */
 .letter-content {
   font-family: 'Lora', Georgia, serif;
   color: #4d3d3d; 
@@ -370,7 +368,7 @@ h2 span {
   background: rgba(255, 255, 255, 0.85); 
   backdrop-filter: blur(5px);
   padding: 45px 35px 20px; 
-  border-radius: 8px 8px 0 0; /* Скругляем только верхние углы */
+  border-radius: 8px 8px 0 0;
   border: 1px solid rgba(255, 255, 255, 1);
   border-bottom: none; 
   box-shadow: 0 15px 35px rgba(117, 67, 84, 0.08);
@@ -440,7 +438,7 @@ h2 span {
   border-top: 1px dashed rgba(198, 110, 133, 0.25);
 }
 
-/* Подпись: продолжаем белую плашку */
+/* Подпись */
 .letter-signature {
   margin-top: 0;
   font-family: 'Playfair Display', Georgia, serif;
@@ -452,7 +450,7 @@ h2 span {
   background: rgba(255, 255, 255, 0.85); 
   backdrop-filter: blur(5px);
   padding: 0 35px 45px; 
-  border-radius: 0 0 8px 8px; /* Скругляем нижние углы */
+  border-radius: 0 0 8px 8px; 
   border: 1px solid rgba(255, 255, 255, 1);
   border-top: none; 
   box-shadow: 0 15px 35px rgba(117, 67, 84, 0.08);
@@ -708,7 +706,7 @@ h2 span {
   color: var(--pink-dark);
 }
 
-/* ===== НОВЫЕ ЗАГОЛОВКИ СЕКЦИЙ ===== */
+/* ===== ШРИФТ СЕКЦИЙ ===== */
 
 .section-heading {
   text-align: center;
@@ -828,14 +826,13 @@ h2 span {
     padding: 0 4px;
   }
 
-  /* На мобильных немного меняем отступы для письма */
   .letter-section {
     padding: 50px 15px;
   }
   
   .letter-content {
     padding: 30px 20px 15px; 
-    background: rgba(255, 255, 255, 0.92); /* Чуть плотнее фон для читаемости */
+    background: rgba(255, 255, 255, 0.92);
   }
 
   .letter-signature {
